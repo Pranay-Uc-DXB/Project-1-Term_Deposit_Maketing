@@ -320,20 +320,20 @@ def evaluate_model(model, x_train, y_train):
     return scores
 
 # %%
-# #getting the models to evaluate
-# models=get_models()
+#getting the models to evaluate
+models=get_models()
 
 # #evluating the models and storing results
-# results,names=list(),list()
-# for name, model in models.items():
-#     scores=evaluate_model(model,x_train,y_train)
-#     results.append(scores)
-#     names.append(name)
-#     print('>%s %.2f (%.2f)' % (name, mean(scores),std(scores)))
+results,names=list(),list()
+for name, model in models.items():
+    scores=evaluate_model(model,x_train,y_train)
+    results.append(scores)
+    names.append(name)
+    print('>%s %.2f (%.2f)' % (name, mean(scores),std(scores)))
 
 # #plot for model performance and comparison
-# plt.boxplot(results, labels=names, showmeans=True)
-# plt.show()
+plt.boxplot(results, labels=names, showmeans=True)
+plt.show()
 
 # %% [markdown]
 # From above we see, after addition of 12 columns, the f1_Score of our model tapers off at 0.69. Thus we will be choosing 12 as our n_features_to_select. From here we will explore the top 12 columns that explain most of the patterns/behaviour/trends in our training dataset. 
@@ -412,23 +412,23 @@ print('Mean f1_Score: %.2f' % mean(scores))
 # # Applying Decision tree on imbalalnced dataset with SMOTE and Random undersampling
 
 # # values to evaluate
-# k_val=[1,2,3,4,5,6,7]
-# for k in k_val:
-#    over=SMOTE(k_neighbors=k,random_state=2)
-#    under=RandomUnderSampler(random_state=2)
-#    steps=[('over',over),('under',under),('model',model)]
-#    pipeline=make_pipeline(over,under,model)
-#    cv=RepeatedStratifiedKFold(n_splits=10,n_repeats=3,random_state=1)
-#    scores=cross_val_score(pipeline,x_train,y_train,scoring='f1_macro', cv=cv,n_jobs=1)
-#    score=mean(scores)
-#    print('> k=%d, Mean f1_Score: %.2f' % (k,score))
+k_val=[1,2,3,4,5,6,7]
+for k in k_val:
+   over=SMOTE(k_neighbors=k,random_state=2)
+   under=RandomUnderSampler(random_state=2)
+   steps=[('over',over),('under',under),('model',model)]
+   pipeline=make_pipeline(over,under,model)
+   cv=RepeatedStratifiedKFold(n_splits=10,n_repeats=3,random_state=1)
+   scores=cross_val_score(pipeline,x_train,y_train,scoring='f1_macro', cv=cv,n_jobs=1)
+   score=mean(scores)
+   print('> k=%d, Mean f1_Score: %.2f' % (k,score))
 
 # %%
-# #model=DecisionTreeClassifier()
-# # over=SMOTE(sampling_strategy=0.5,k_neighbors=3)
-# under=RandomUnderSampler(sampling_strategy=1)
-# pipeline=make_pipeline(over,under)
-# x_sm,y_sm=pipeline.fit_resample(x_train,y_train)
+#model=DecisionTreeClassifier()
+# over=SMOTE(sampling_strategy=0.5,k_neighbors=3)
+under=RandomUnderSampler(sampling_strategy=1)
+pipeline=make_pipeline(over,under)
+x_sm,y_sm=pipeline.fit_resample(x_train,y_train)
 
 # %%
 
