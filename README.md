@@ -1,7 +1,7 @@
-# Project 1 - Term Deposit Marketing
+## Project 1 - Term Deposit Marketing
 
 
-## Introduction
+# Introduction
 This project pertains to the Finance and Banking industry. A small startup catering to the European Banking Market was looking to optimize its success rate with one of its marketing campaigns. 
 
 The company wanted to build a robust machine-learning system from data coming from a call center via the marketing effort of a European banking institution. 
