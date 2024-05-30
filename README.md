@@ -1,5 +1,7 @@
 # Project 1 - Term Deposit Marketing
 
+
+## Introduction
 This project pertains to the Finance and Banking industry. A small startup catering to the European Banking Market was looking to optimize its success rate with one of its marketing campaigns. 
 
 The company wanted to build a robust machine-learning system from data coming from a call center via the marketing effort of a European banking institution. 
@@ -10,7 +12,7 @@ The goal was to analyze data, design, and implement a machine-learning model tha
 2) Which customers are likely to buy the investment product? Determine the segments that the firm must prioritize
 3) What makes the customers buy? Which feature the firm should focus more on?
 
-
+# Methodology
 Project Overview:<br>
 The following steps were taken to achieve the results for the goals outlined above:
 
@@ -51,7 +53,7 @@ The following steps were taken to achieve the results for the goals outlined abo
       Fine-tuned model was deployed on cross-validation and test sets whose performance was reported.
 
 
-Conclusion:
+# Conclusion:
 
 
     
