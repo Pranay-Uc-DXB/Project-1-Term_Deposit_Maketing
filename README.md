@@ -55,6 +55,20 @@ The following steps were taken to achieve the results for the goals outlined abo
 
 ## Conclusion:
 
+The model was able to predict with great accuracy, whether the customer would subscribe to a term deposit or not, with a final f1 score of 0.97 and 5 fold-cross validation. Following were the steps taken to achieve a final f1 score of 0.97 with 5 fold-cross validation:
+1) Reduced data leakage
+2) Scaled different features appropriately
+3) Used a recursive feature engineering technique (RFE) to filter 27 features
+4) Used a combination of SMOTE and undersampling to balance the class
+5) Applied Spot-check framework 
+6) Fine-tuned and performed 5 fold cross validation
+
+Duration was one of the most important features that led to conversion. The company must focus on delivering quality sales pitch and engagement to further enhance customer experience. Other features that the company can potentially use to better target their customers for conversions were found as follows:
+
+Features: 'education', 'housing', 'month', 'job_blue-collar', 'job_management', 'marital_married', 'contact_cellular', 'age', 'balance', 'day','campaign'
+(Please note that the above features only enable to prioritize purchasing customers)
+
+
 
     
 
